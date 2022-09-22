@@ -87,6 +87,32 @@ print(numbers)
 text = 'hello world'
 print(set(text))
 
+#Dictionary
+user = {
+    'name': 'Alex',
+    'age': 34
+}
+user['name'] = Pavel
+print(user)
+#можно обратиться по несуществущему ключу чтобы обьявить его (добавить)
+print(user['phone number'])
+print(user.get('key')) #получение значения по ключу, если такого не то вернется зачение по умолчанию
+
+#update
+user = {
+    'name': 'alex',
+    'age': 34
+}
+new_data = {
+    'name': 'pavel',
+    'city': 'minsk'
+}
+new_user = user | new_data
+print(user)
+
+
+
+
 
 
 
