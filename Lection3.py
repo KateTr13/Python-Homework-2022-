@@ -110,6 +110,18 @@ new_data = {
 new_user = user | new_data
 print(user)
 
+father_age = int(input())
+son_age = int(input())
+result = father_age - son_age * 2
+print(result)
+
+number = input()
+first = int(number[0])
+second - int(number[1])
+third = int(number[2])
+print(first + second +third)
+
+
 
 
 
