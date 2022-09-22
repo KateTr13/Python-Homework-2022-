@@ -64,7 +64,30 @@ number = numbers.pop(2)
 numbers = [2, 3]
 numbers.remove('hello')
 print(numbers)
-#удаляет первое значение
+#удаляет первое значение которое равно переданному значению
+
+#adding
+numbers = [1, 2, 4]
+numbers.append([6,7])
+
+numbers = [1, 3]
+numbers.sort(reverse=True)
+print(numbers)
+#сортировка
+
+
+#Кортежи
+
+numbers = (1, 2, 3, 4, 5, 6, [7, 8, 9])
+numbers[6].append(0)
+print(numbers)
+#поиск по кортежам происходит быстрее чем по спискам. Изменить список внутри кортежа можно, потому что там ссылка на коллекцию)
+
+#Множества
+text = 'hello world'
+print(set(text))
+
+
 
 
 
