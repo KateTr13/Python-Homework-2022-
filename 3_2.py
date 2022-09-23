@@ -3,8 +3,9 @@
 # буквы в текст введенный с клавиатуры
 
 text = input('Введите текст')
-dict_one = {}
-print(text.get('place'))
+data = {i: text.count(i) for i in text}
+print(data)
+
 
 
 
