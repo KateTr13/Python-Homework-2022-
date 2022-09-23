@@ -2,10 +2,8 @@
 # значениями вложенный словарь с ключами "name" и "email", а значения
 # для этих ключей будут браться с клавиатуры
 
-dict_two = {}
+import collections
 
-users = {
-    1:{
-        'name': 'name1',
-        'email': 'email1',
-    },
+text = int(input())
+see = {i: {'name': input(), 'email': input()} for i in range(0, text)}
+print(see)
