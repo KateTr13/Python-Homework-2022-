@@ -5,3 +5,15 @@
 text = int(input())
 see = {i: {'name': input(), 'email': input()} for i in range(0, text)}
 print(see)
+
+
+
+
+n = int(input('n: '))
+users = {
+    i: {
+        'name': input(f'{i} name: '),
+        'email': input(f'{i} email: ')
+    } for i in range(n)
+}
+print(users)
