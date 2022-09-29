@@ -120,7 +120,7 @@ else:
 
 
 def is_palindrome(text):
-    if not isnstance(text, str):
+    if not isinstance(text, str):
         raise TypeError('argument `text` must be string')
     return text.lower() == text.lower()[::-1]
 
