@@ -3,10 +3,15 @@
 Number = int(input('Enter numberN'))
 Mult = int(input('Enter numberM'))
 K_lesser = int(input('Enter numberK'))
-while Number > K_lesser:
-      if Number % Mult:
+numbers = []
+while Number:
+      if not K_lesser % Mult:
+          numbers.append(K_lesser)
+          Number -= 1
+      K_lesser += 1
+print(numbers)
 
-    print(i)
+
 
 
 

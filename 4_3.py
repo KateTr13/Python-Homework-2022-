@@ -1,5 +1,11 @@
 # Вывести четные числа от 2 до N по 5 в строку
 
-N_numbers = int(input())
-numbers = [i for i in range(2, N_numbers) if i % 2 == 0]
-numbers = str(numbers)
+n = int(input())
+for i in range(2, n+1, 10):
+    for j in range(i, i+9, 2):
+        if j > n:
+            break
+        print(j, end=' ')
+    print()
+
+
