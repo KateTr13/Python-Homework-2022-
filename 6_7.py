@@ -2,3 +2,9 @@
 #соседей, для крайних чисел одним из соседей является число с противоположной
 #стороны списка
 
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in range(len(number)):
+    if i != len(number) - 1:
+        print(number[i-1] + number[i+1])
+    else:
+        print(number[i - 1] + number[0])
