@@ -242,7 +242,7 @@ class InlineButton(object):
 
     def dict(self) -> dict:
         return {'text': self.text, 'callback_data': self.callback_data} #будет возвращаться словарь
-=
+
 class InlineMarkup(object):
     def __init__(self, inline_keyboard: list) -> None:
         if not isinstance(inline_keyboard, list):
@@ -250,7 +250,7 @@ class InlineMarkup(object):
 
         for line in inline_keyboard:
             if not isinstance(line, list):
-            raise TypeError
+                raise TypeError
         for button in line:
             if not isinstance(button, InlineButton):
                 raise TypeError
