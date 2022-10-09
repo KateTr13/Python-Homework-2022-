@@ -42,7 +42,12 @@ class Time:
         # new = [self._convert_to_str(i) for i in self._time_list]
         return self._time_list
 
+    def reserve_time(self, _time):
+        if _time in self._time_list:
+            self._time_list.remove(_time)
+
 
 a = Time(start_time='10:00', end_time='19:00', delta="0:30")  # наши данные о времени
 print(a.get_timeline()) #просто список времени
-
+a.reserve_time("12:00")
+print(a.get_timeline())
