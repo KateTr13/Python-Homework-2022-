@@ -13,7 +13,7 @@ number = int(input())
 if number % 2:
     is_even = 'No'
 else:
-    is venv = 'Yes'
+    is_venv = 'Yes'
 is_even = 'No' if number % 2 else 'Yes'
 
 ...
