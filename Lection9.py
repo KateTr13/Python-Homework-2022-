@@ -3,32 +3,32 @@ import csv
 
 #абсолютный путь - как в винде, от корня к файлу. Относительный  - относительно проекта (где в проекте
 # лежит файл)
-file = open(KatePythonStart/Lection9.py, 'r', encoding='utf-8')
+file = open('KatePythonStart/Lection9.py', 'r', encoding='utf-8')
 
 file.close()
 # нужно будет закрыть файл. Иначе будет висеть в оперативной памяти
 
 # with.. as открывает а потом сам закрывает файл
-with file = open(KatePythonStart/Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart/Lection9.py', 'r', encoding='utf-8') as file:
     pass
 
-with file = open(KatePythonStart/Lection9.py, 'r', encoding='utf-8') as file, open() as file2:
+with file = open('KatePythonStart/Lection9.py', 'r', encoding='utf-8') as file, open() as file2:
 
 #Чтение и запись
-with file = open(KatePythonStart / Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart / Lection9.py', 'r', encoding='utf-8') as file:
     text = file.read()
 print(text)
 
-with file = open(KatePythonStart / Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart / Lection9.py', 'r', encoding='utf-8') as file:
     print(file.readline())
 #readline итератор который возвращает каждый раз по одной строке
 
-with file = open(KatePythonStart / Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart / Lection9.py', 'r', encoding='utf-8') as file:
     lines = file.readlines()
 #   lines = [line.strip() for line in file]
 print(lines)     # readlines считывает список строк
 
-with file = open(KatePythonStart / Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart / Lection9.py', 'r', encoding='utf-8') as file:
     lines = []
     for line in file:
         if line.strip().isdigit():
@@ -37,11 +37,12 @@ print(lines)
 
 #Запись
 text = ['text', 'is', 'here']
-with file = open(KatePythonStart / Lection9.py, 'r', encoding='utf-8') as file:
+with file = open('KatePythonStart / Lection9.py', 'w', encoding='utf-8') as file:
     file.write('\n'.join(text))
 #так как это список строк то обьединяю через джоин с любым указанным разделителем и записываю в файл
+#r чтение, w перезаписать файл, a добавить новое к содержимому файла
 
-#Дан файл с числами чере запятую (могут быть пробелы)
+#Дан файл с числами через запятую (могут быть пробелы)
 # прочитать файл в список списков чисел (int)
 with open('path', 'r', encoding='utf-8') as file:
     for line in file:
