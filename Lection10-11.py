@@ -107,15 +107,15 @@ class Category(Base):
     __tablename__: str = 'categories'
 
     id = Column(Integer, primary_key=True)
-    name = (VARCHAR(24), nullable=False, unique=True)
+    name = Column(VARCHAR(24), nullable=False, unique=True)
 
 
 class Product(Base):
     __tablename__: str = 'products'
 
     id = Column(Integer, primary_key=True)
-    name = (VARCHAR(24), nullable=False, unique=True)
-    descr = (VARCHAR(512), nullable=False)
+    name = Column(VARCHAR(24), nullable=False, unique=True)
+    descr = Column(VARCHAR(512), nullable=False)
     is_published = Column(Boolean, default=False)
     date_published = Column(TIMESTAMP, default=now())
 #если импортировано from sqlalchemy.sql.functions import now то значение нау будет выставлено
