@@ -1,3 +1,8 @@
+from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, INTEGER, VARCHAR, ForeignKey, Boolean
+from sqlalchemy.sql.functions import now
+from sqlalchemy import create_engine
+
 
 Base = declarative_base()
 
