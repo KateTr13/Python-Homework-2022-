@@ -65,3 +65,28 @@ if __name__ = '__main__':
 DATABASE_ASYNC_URL: str = 'postgresql+asyncpg://kate:teacup@local:5432/db34kate'
 
 engine = create_async_engine()
+
+#Когда пишем декоратор чтобы обернуть асинхронную ф-ю внешняя остается синхронной(def) а внутр. становится корутиной
+def create_session(func):
+    async def wrapper(**kwargs):
+        with AsyncSession(bind=engine) as session:
+            return await func(**kwargs, session=session) #здесь передаем сессию
+        return wrapper
+
+#CRUD методы становятся корутинами
+    @staticmethod
+    @create_session
+    async def add(category: Category, AsyncSession = None) -> Optional[Category]:
+        session.add(category)
+        try:
+            await session.commit()
+        except IntegrityError:
+            return None
+        else:
+            await session.refresh(category)
+            return category
+#Подчеркивания потому что некоторые методы это корутины
+#session.add - не корутина, а session.commit(), session.execute и session.refresh(category) это корутины поэтому
+# будет await session.refresh(category)
+
+
