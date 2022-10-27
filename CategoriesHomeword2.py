@@ -53,3 +53,4 @@ class Order_item(Base):
     order_id = Column(Integer, ForeignKey('orders.id', ondelete='CASCADE'), nullable=False)
     product_id = Column(Integer, ForeignKey('products.id', ondelete='CASCADE'), nullable=False)
 
+

@@ -36,7 +36,7 @@ def add_category(category: Category) -> Category | None:
         session.add(category)
         try:
             session.commit()
-        except IntegrityError
+        except IntegrityError:
             return None
         else:
             session.refresh(category)
@@ -183,7 +183,7 @@ def create_session(func):
     def wrapper(**kwargs):
         with Session() as session:
             return func(**kwargs, session=session) #здесь передаем сессию
-        return wrapper
+    return wrapper
 
 
 @create_session
@@ -306,7 +306,8 @@ class CRUDCategory(object):
 
 
 from csv import DictReader
-from typing import List
+from typing import List, Optional
+
 
 def parse_categories() -> List[dict]: #считывает файл, по разделителю точка с запятой
     with open('categories.csv', 'r', encoding='utf-8') as file:
